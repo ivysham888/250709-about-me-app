@@ -24,15 +24,19 @@ struct ContentView: View {
                 VStack {
                     ScrollView {
                         VStack {
-                            Text("ABOUT ME")
-                                .font(.system(size: 50, weight: .bold))
-                                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-                                .multilineTextAlignment(.center)
-                                .underline()
+//                            Text("ABOUT ME")
+//                                .font(.system(size: 50, weight: .bold))
+//                                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+//                                .multilineTextAlignment(.center)
+//                                .underline()
+//                                .foregroundColor(.blue)
                             
                             Text("Ivy S")
-                                .font(.custom("AmericanTypewriter", fixedSize: 37))
-                                .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
+                                .font(.custom("AmericanTypewriter", fixedSize: 50))
+                                .fontWeight(.bold)
+                                .foregroundColor(.blue)
+                                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                                .underline()
                             
                             HStack(alignment: .top) {
                                 Image("ivycartoon")
@@ -42,8 +46,11 @@ struct ContentView: View {
                                 VStack {
                                     Text("Hi! My name is Ivy and I am interested in coding! I hope to continue to improve my skills :)")
                                         .alignmentGuide(.leading) { $0[.leading] }
+                                        .foregroundColor(.blue)
                                         
                                 }
+                                
+                            
                                 
                             }
                             
