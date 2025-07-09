@@ -13,7 +13,7 @@ struct ContentView: View {
             ZStack {
                 
                 Rectangle()
-                    .fill(Color.yellow)
+                    .fill(Color.pink)
                     .ignoresSafeArea()
                 
                 Rectangle()
@@ -22,7 +22,7 @@ struct ContentView: View {
                     .cornerRadius(25)
                 
                 VStack {
-                    ScrollView {
+                   
                         VStack {
 //                            Text("ABOUT ME")
 //                                .font(.system(size: 50, weight: .bold))
@@ -31,33 +31,82 @@ struct ContentView: View {
 //                                .underline()
 //                                .foregroundColor(.blue)
                             
-                            Text("Ivy S")
+                            Text("About Me")
                                 .font(.custom("AmericanTypewriter", fixedSize: 50))
                                 .fontWeight(.bold)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.pink)
                                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
                                 .underline()
                             
-                            HStack(alignment: .top) {
-                                Image("ivycartoon")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color.red)
+                                    .frame(width: 360, height: 150)
+                                    .cornerRadius(15)
                                 
-                                VStack {
-                                    Text("Hi! My name is Ivy and I am interested in coding! I hope to continue to improve my skills :)")
-                                        .alignmentGuide(.leading) { $0[.leading] }
-                                        .foregroundColor(.blue)
+                                HStack(alignment: .top) {
+                                    Image("ivycartoon")
+                                        .resizable()
+                                        .frame(width: 100, height: 100)
+                                        .padding()
+                                    
+                                    VStack {
+                                        Text("Hi! My name is Ivy and I am interested in coding! I hope to continue to improve my skills :)")
+                                            .alignmentGuide(.leading) { $0[.leading] }
+                                            .foregroundColor(.white)
+                                            .padding()
                                         
+                                    }
+                                    
+                                    
                                 }
-                                
+                                .frame(width: 360, height: 150)
                             
+    
+                            }
+                            
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color.orange)
+                                    .frame(width: 360, height: 150)
+                                    .cornerRadius(15)
+                                HStack {
+                                    Text("My favourite food is dark chocolate (not milk nor white)!")
+                                        .foregroundColor(.white)
+                                        .padding()
+                                    
+                                    Image("darkchocolate")
+                                        .resizable()
+                                        .frame(width: 120, height: 100)
+                                        .padding()
+                                }
+                                .frame(width: 360, height: 150)
+                            }
+                            
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color.darkeryellow)
+                                    .frame(width: 360, height: 150)
+                                    .cornerRadius(15)
+                                VStack {
+                                    
+                                   
+                                    
+                                    
+                                    Text("Yellow and pink are my favourite colours!")
+                                        .foregroundColor(.white)
+                                    
+                                    Image("pinkheart")
+                                        .resizable()
                                 
+                                }
+                                .frame(width: 360, height: 150)
                             }
                             
                             
                             
                             Spacer()
-                        }
+                        
                     }
                     
                 }
